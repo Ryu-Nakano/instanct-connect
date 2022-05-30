@@ -1,0 +1,4 @@
+00 20 * * 4 sh /home/aita/public_html/instant/server/callRefresh.sh > /home/aita/public_html/instant/server/log/callRefresh.log
+
+55 19 * * 4 sh /home/aita/public_html/instant/server/startServer.sh > /home/aita/public_html/instant/server/log/startServer.log
+05 20 * * 4 sh /home/aita/public_html/instant/server/stopServer.sh > /home/aita/public_html/instant/server/log/stopServer.log

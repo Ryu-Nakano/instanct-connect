@@ -1,0 +1,142 @@
+body {
+  font-family: "Yu Gothic", YuGothic, Verdana, 'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  min-width: 350px;
+  }
+a {
+	text-decoration:none;
+}
+
+.title {
+  font-family: "Yu Gothic", YuGothic, Verdana, 'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+}
+
+span.title {font-size: x-large; }
+
+.container {
+  font-family: "Yu Gothic", YuGothic, Verdana, 'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  text-align: center;
+  background: #ffffff;
+}
+
+.calender {
+  margin-bottom: 50px;
+}
+
+.confirm {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.btn-box {
+  display: inline-block;
+  width: 200px;
+  text-align: center
+  font-size: 16px;
+  color: #004a71;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  position: relative;
+  border: 2px solid #004a71;
+  transition: .4s;
+}
+
+.btn-box:hover {
+  border: 2px solid transparent;
+  color: #00F;
+}
+
+.btn-box:before, .btn-box:after {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  transform: scale(0);
+  transition: .2s;
+}
+
+.btn-box:before {
+  border-bottom: 2px solid #00F;
+  border-left: 2px solid #00F;
+  transform-origin: 100% 0%;
+}
+
+.btn-box:after {
+  border-top: 2px solid #00F;
+  border-right: 2px solid #00F;
+  transform-origin: 0% 100%;
+}
+
+.btn-box:hover:after,
+.btn-box:hover:before {
+  transform: scale(1);
+}
+
+.flex {
+display: flex;
+justify-content: center;
+}
+.center {
+  background:green;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #333;
+  color: rgb(255, 255, 255);
+}
+
+/* 参加者ボタン */
+.participantlink {
+color:#ffffff;
+font-weight:bold;
+
+}
+
+.participantlink_hide{
+color:green;
+}
+
+.participantlink:hover {
+background: #ffffff;
+color: #000000;
+}
+
+/* コピーボタン */
+.copy_btn {
+width:65%!important;
+padding: 5px 0;
+margin-left: auto!important;
+margin-right: auto!important;
+color:green;
+font-weight:bold;
+
+transition: .4s;
+text-align: center;
+}
+
+.copy_btn:hover {
+background: #ffffff;
+color: #000000;
+border: solid 2px #000000;
+border-radius: 3px;
+cursor: pointer;
+}
+
+#siteHeader{
+display: flex;
+width: 100%;
+background: #004a71;
+}
+
+.site_logo img{
+margin-left: 30px;
+margin-top: 10px;
+height: 85px;
+}
+
+

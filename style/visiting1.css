@@ -1,0 +1,50 @@
+.reservation-form{
+  text-align: center;
+}
+  /*Trigger Button*/
+.login-trigger {
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to bottom right, #006ac0, #5e96ff);
+  padding: 15px 30px;
+  border-radius: 30px;
+  position: relative; 
+  top: 40px;
+  font-size: x-large;
+}
+
+/*Modal*/
+.close {
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  transform: scale(1.2)
+}
+.modal-content {
+  font-weight: bold;
+  background: linear-gradient(to bottom right,#5e96ff, #006ac0);
+}
+.form-control {
+  margin: 1em 0;
+}
+.form-control:hover, .form-control:focus {
+  box-shadow: none;  
+  border-color: #fff;
+}
+.patientID, .birhday, .select-department {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 2px solid #eee;
+  padding-left: 0;
+  font-weight: normal;
+  background: transparent;
+  color: rgb(46, 41, 39);
+  font-size: x-large;
+}
+.form-control::-webkit-input-placeholder {
+  color: #eee;  
+}
+.form-control:focus::-webkit-input-placeholder {
+  font-weight: bold;
+  color: #fff;
+}

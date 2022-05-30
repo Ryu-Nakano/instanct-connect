@@ -1,0 +1,171 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;/*rem算出をしやすくするために*/
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+/* リンクボタン */
+.button {
+  margin-left: 20px;
+}
+
+a.btn-flat {
+  overflow: hidden;
+
+  padding: 1.5rem 6rem;
+
+  color: #fff;
+  border-radius: 0;
+  background: #000;
+  font-size: 30px;
+}
+
+a.btn-flat span {
+  position: relative;
+}
+
+a.btn-flat:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100px;
+  height: 100px;
+
+  content: '';
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-80%) translateY(-25px);
+  transform: translateX(-80%) translateY(-25px);
+
+  border-radius: 50%;
+}
+
+a.btn-flat1:before {
+  background: #0077ff;
+}
+
+a.btn-flat2:before {
+  background: #be0000;
+}
+
+a.btn-flat3:before {
+  background: #fa6603;
+}
+
+a.btn-flat4:before {
+  background: #00b33c;
+}
+
+a.btn-flat5:before {
+  background: #da00f7ea;
+}
+
+a.btn-flat6:before {
+  background: #4200f7ea;
+}
+
+a.btn-flat7:before {
+  background: #f71d00ea;
+}
+.button14 a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: 300px;
+  color: rgb(110, 110, 110);
+  font-size: 20px;
+  font-weight: 700;
+  background-image: linear-gradient(170deg, #659de6, #5abab8);
+  border-radius: 50vh;
+  transition: 0.3s;
+}
+
+.button14 a::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #333333;
+  border-right: 3px solid #333333;
+  transform: rotate(45deg);
+}
+
+.button14 a:hover {
+  text-decoration: none;
+  background-image: linear-gradient(-170deg, #659de6, #5abab8);
+  color: white;
+}
+
+.button15 a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: 250px;
+  color: rgb(220, 220, 200);
+  font-size: 15px;
+  font-weight: 700;
+  background-image: linear-gradient(170deg, #4545ff, #5abab8);
+  border-radius: 50vh;
+  transition: 0.3s;
+}
+
+.button15 a::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #333333;
+  border-right: 3px solid #333333;
+  transform: rotate(45deg);
+}
+
+.button15 a:hover {
+  text-decoration: none;
+  background-image: linear-gradient(-170deg, #659de6, #5abab8);
+  color: white;
+}
+
+
+a.btn-flat:hover:before {
+  width: 400px;
+  height: 400px;
+
+  -webkit-transform: translateX(-1%) translateY(-175px);
+
+  transform: translateX(-1%) translateY(-175px);
+}

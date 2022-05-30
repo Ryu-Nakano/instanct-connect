@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Webex Bank</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/main_hospital.css">
+</head>
+
+<body>
+	<!-- 定数を読み込み -->
+	<script type="text/javascript" src="../js/systeminit.js"></script>
+	<script type="text/javascript" src="../js/systeminit_visiting.js"></script>
+	<script type="text/javascript" src="../js/systeminit_token.js"></script>
+		<div class="container">
+			<p >
+				<script type="text/javascript" src="../js/calender2.js"></script>
+			</p>
+		</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
+	<script>
+		flatpickr("#flatpickr", {
+			locale:"ja",
+			minDate:"today",
+			enableTime: true,
+			enableSeconds: true,
+			defaultHour: 15,
+			defaultMinute: 30,
+			hourIncrement: 3,
+			minuteIncrement: 15
+		});
+		var clipboard = new Clipboard('.copy_btn');
+	</script>
+</body>
+</html>

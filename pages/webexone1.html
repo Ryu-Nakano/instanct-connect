@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webex 区役所</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../style/visiting1.css">
+<body>
+	<!-- 定数を読み込み -->
+	<script type="text/javascript" src="../js/systeminit.js"></script>
+	<script type="text/javascript" src="../js/systeminit_webexone.js"></script>
+	<div class="header">
+		<header id="siteHeader">
+			<p class="site_logo"><img src="../img/logo-webexone.png" alt="Webex" height="80px"></p>
+		</header>
+	</div>
+	<div class="container">
+		<div class="reservation-form">
+			<!--Trigger-->
+			<a class="login-trigger" href="#" data-target="#login" data-toggle="modal">オンライン相談予約</a>
+			<div id="login" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-body">
+			        <button data-dismiss="modal" class="close">&times;</button>
+			        <form name="form1">
+						<input id="patientID" type="text" name="patientID" id="patientID" class="patientID form-control" placeholder="お名前" />
+						<input id="birthday" type="text" name="birthday" id="birthday" class="birhday form-control" placeholder="メールアドレス" />
+						<select name="selectdp" id="select-department" class="select-department form-control" style="width: 300px; height: 50px;" onchange="departmentChange();">
+							<option value="" disabled selected>相談内容</option>
+							<script type='text/javascript'>
+								let i = 0;
+								let selText = '';
+								for( i = 0 ; i < department.length ; i ++ ) {
+									selText = selText + '<option value="' + department[i][0] + '">' + department[i][1] + '</option>';
+								}
+								document.write(selText);
+							</script>
+						</select>
+			        </form>
+			      </div>
+			    </div>
+			  </div>  
+			</div>
+		</div>
+	</div>
+
+<!-- ドロップボックス変更時 -->
+<script type='text/javascript'>
+function departmentChange() {
+	// 診療科
+	let department = document.form1.selectdp;
+	let num = department.selectedIndex;
+	let ptIDstr = document.getElementById("patientID").value;
+	let btdaystr = document.getElementById("birthday").value;	
+
+	// 値(数値)から値(value値)を取得
+	const depstr = department.options[num].value;
+	
+	parent.frames[1].location.href = ( fileName + "2.html?ptId=" + ptIDstr + "&btday=" + btdaystr + "&dep_cd=" + depstr + "&moveBase=0&move=0");
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+flatpickr("#flatpickr", {
+	locale:"ja",
+	minDate:"today",
+	enableTime: true,
+	enableSeconds: true,
+	defaultHour: 15,
+	defaultMinute: 30,
+	hourIncrement: 3,
+	minuteIncrement: 15
+});
+</script>
+<script>
+	var clipboard = new Clipboard('.copy_btn');
+</script>
+
+	</body>
+</html>

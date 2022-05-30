@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+<script type="text/javascript">
+<!--
+
+function subwin(){
+
+	window.close(); // サブウィンドウを閉じる
+
+}
+
+// -->
+</script>
+
+</head>
+<body onLoad="setTimeout('subwin()', 5000)">
+
+<p>5秒後にサブウィンドウが閉じられます。</p>
+
+</body>
+</html>
